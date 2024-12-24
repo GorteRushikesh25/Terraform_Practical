@@ -1,0 +1,20 @@
+terraform {
+  required_providers {
+    aws = {
+      source  = "hashicorp/aws"
+      version = "~> 5.0"
+    }
+  }
+}
+
+provider "aws" {
+  region  = var.aws_region
+}
+
+terraform {
+  backend "s3" {
+    bucket="demo123rushi"
+    key = "myproject"
+    region="ap-south-1"    
+  }
+}
