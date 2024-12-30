@@ -1,5 +1,3 @@
-
-
 resource "aws_instance" "ec2example" {
   ami =         data.aws_ami.amzn-linux-2023-ami.id
   subnet_id =   data.aws_subnet.selected.id
